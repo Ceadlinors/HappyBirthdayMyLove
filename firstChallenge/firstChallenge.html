@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game!</title>
+    <link rel="shortcut icon" href="../cake.svg" type="image/x-icon">
+    <link rel="stylesheet" href="memoryGame.css">
+</head>
+<body>
+    <h1>Your first challenge is <span style="color: #4f1189;">Memory Game!</span></h1>
+    <main>
+        <div class="board" id="board"></div>
+        <button class="btn" onclick="startGame()">Start Game</button>
+    </main>
+    <div id="winModal" class="modal hidden">
+        <div class="modal-content">
+          <h2>Congratulations!</h2>
+          <p>You matched all the pairs! <b>(the photos were so us btw)</b></p>
+          <p>Now you can play again or get your reward and go to the next challenge!</p>
+          <button id="restartBtn" class="btn">Restart</button>
+          <button class="btn" onclick="copyText()">First Gift</button>
+        </div>
+    </div>
+
+</body>
+<script src="memoryGame.js"></script>
+</html>

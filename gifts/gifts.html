@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIFTS!</title>
+    <link rel="shortcut icon" href="../cake.svg" type="image/x-icon">
+    <link rel="stylesheet" href="gifts.css">
+</head>
+<body>
+    <h1 id="welcome">Welcome to the <span style="font-style: italic; color: #4f1189;">Gift-Hub!</span> Here you can pick up your gifts you just need to type in the password (psst just click ctrl + v)</h1>
+    <main id="main_box">
+        <input type="text" placeholder="password" id="pass">
+        <button class="btn" id="submitBtn">Submit</button>
+    </main>
+    <div class="box hidden" id="box_1">
+        <h2>Here's your first reward, you can see it here or click the button to download it.</h2>
+        <small>click on the image to make it bigger</small>
+        <img src="real-gifts/poem.png" alt="poem" onclick="openFullscreen(this)">
+        <a href="real-gifts/poem.png" download>Download here!</a>
+        <button class="btn extra" onclick="location.href = '../secondChallenge/secondChallenge.html'">Second Challenge</button>
+    </div>
+    <div class="box hidden" id="box_2">
+        <h2>WOW it's already your second reward!! I'm so proud :), you can see it here or click the button to download it.</h2>
+        <small>click on the image to make it bigger</small>
+        <img src="real-gifts/Yen_as_a_Raccoon.png" alt="card" onclick="openFullscreen(this)">
+        <a href="real-gifts/Yen_as_a_Raccoon.png" download>Download here!</a>
+        <button class="btn extra" onclick="location.href = '../thirdChallenge/thirdChallenge.html'">Third (last) Challenge</button>
+    </div>
+    <div class="box hidden" id="box_3">
+        <h2>This is your last gift. I hope you enjoyed my little website and like your gifts! Once again HAPPY BIRTHDAY LOVE<3</h2>
+        <small>Sorry for the noises in the background :/</small>
+        <video id="sideVideo" src="real-gifts/HappyBirthday!.mp4" controls class="extra"></video>
+    </div>
+</body>
+<script src="gifts.js"></script>
+</html>

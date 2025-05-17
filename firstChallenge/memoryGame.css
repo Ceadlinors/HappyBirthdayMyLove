@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background-color: #FFE1E0;
+}
+
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    margin-top: 15px;
+    font-size: 250%;
+    height: fit-content;
+    text-align: center;
+    color: #7F55B1;
+}
+/* board */
+.board {
+    width: 440px;
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    gap: 10px;
+    margin: 40px auto 20px;
+  }
+
+/* cards */
+.card {
+    width: 100px;
+    height: 100px;
+    perspective: 1000px;
+    margin: 10px;
+    cursor: pointer;
+}
+  
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+}
+  
+.card.flipped .card-inner {
+    transform: rotateY(180deg) scale(1.05);
+}
+  
+.card:not(.flipped):hover .card-inner {
+    transform: scale(1.03);
+    transition: transform 0.3s ease;
+}
+  
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+  
+.card-front {
+    background-color: #7F55B1;
+}
+  
+.card-back {
+    background-color: white;
+    transform: rotateY(180deg);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.card-back img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    border-radius: 8px;
+}
+  
+.flipped {
+    transform: rotateY(180deg);
+}
+
+/* buttons */
+.btn{
+    font-weight: bold;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #F49BAB;
+    margin: 5px;
+    box-shadow: 0 5px #a08bb9;
+    font-size: 20px;
+    color: #7F55B1
+}
+
+    .btn:hover{
+        cursor: pointer;
+        background-color: #f07c91;
+    }
+
+    .btn:active{
+        box-shadow: 0 2px #7F55B1;
+        transform: translateY(3px);
+    }
+
+/* modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.hidden{
+    display: none;
+}  
+.modal-content{
+    background: white;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 90%;
+    width: 300px;
+}
+  
+.modal-content h2{
+    margin-top: 0;
+    font-size: 24px;
+}
+  
+.modal-content p{
+    font-size: 16px;
+    margin: 15px 0 25px;
+}
+  
+.modal-content button{
+    margin: 5px 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}

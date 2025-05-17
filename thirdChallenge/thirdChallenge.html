@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Lesbians!</title>
+    <link rel="shortcut icon" href="../cake.svg" type="image/x-icon">
+    <link rel="stylesheet" href="rockPaperScissors.css">
+</head>
+<body>
+    <h1>Well here we are, your last challenge... This one is for sure the hardest! You're gonna play <span style="color: #4f1189;">Rock-Paper-Lesbian!</span> To win you have to score at least 10 normal points or 7 lesbian ones (you'll see) BUT! if the computer gets at least 15 points you'll have to try again. Have fun!</h1>
+    <main>
+        <div class="game-container">
+            <div class="choices">
+                <button class="choice" data-choice="rock">🪨 Rock</button>
+                <button class="choice" data-choice="paper">📄 Paper</button>
+                <button class="choice" data-choice="scissors">✂️ Scissors</button>
+              </div>
+              <div class="result">
+                <p id="player-choice">You chose: -</p>
+                <p id="computer-choice">Computer chose: -</p><br>
+                <h2 id="outcome">Result: -</h2><br>
+                <p>Player Score: <span id="player-score">0</span></p>
+                <p>Lesbian Score: <span id="lesbian-score">0</span></p>
+                <p>Computer Score: <span id="computer-score">0</span></p>
+            </div>
+        </div>
+        <div id="draw-overlay">
+            <img src="lesbian.jpg" alt="Scissoring!" />
+          </div>
+      </main>
+      <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <h2 id="hMsg"></h2>
+            <p>YAY YOU WON! <b>(That's my girl!)</b></p>
+          <p>Now you can play again or get your reward and go to the next challenge!</p>
+          <button id="restartBtn" class="btn">Restart</button>
+          <button class="btn" onclick="copyText()">LAST Gift</button>
+        </div>
+    </div>
+</body>
+<script src="rockPaperScissors.js"></script>
+</html>

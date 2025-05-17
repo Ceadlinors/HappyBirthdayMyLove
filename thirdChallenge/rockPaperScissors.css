@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #FFE1E0;
+}
+
+main{
+    margin-top: 100px;
+    background: #FFE1E0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+h1{
+    margin: 15px 20px 15px;
+    font-size: 200%;
+    height: fit-content;
+    text-align: center;
+    color: #7F55B1;
+}
+
+/* buttons */
+
+.btn{
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #F49BAB;
+    margin: 5px;
+    box-shadow: 0 5px #a08bb9;
+    font-size: 20px;
+    color: #7F55B1;
+    font-weight: bold;
+}
+
+    .btn:hover{
+        cursor: pointer;
+        background-color: #f07c91;
+    }
+
+    .btn:active{
+        box-shadow: 0 2px #7F55B1;
+        transform: translateY(3px);
+    }
+  
+.game-container{
+    text-align: center;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+  
+.choices{
+margin: 20px 0;
+}
+  
+.choice{
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+  
+.choice:hover {
+background-color: #0056b3;
+}
+  
+.result {
+    margin-top: 20px;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.hidden{
+    display: none;
+}  
+.modal-content{
+    background: white;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 90%;
+    width: 300px;
+}
+  
+.modal-content h2{
+    margin-top: 0;
+    font-size: 24px;
+}
+  
+.modal-content p{
+    font-size: 16px;
+    margin: 15px 0 25px;
+}
+  
+.modal-content button{
+    margin: 5px 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#draw-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.60);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    display: none;
+  }
+  
+  #draw-overlay img {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #fff;
+  }
+  

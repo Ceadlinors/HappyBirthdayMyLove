@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whack-a-MAN!</title>
+    <link rel="shortcut icon" href="../cake.svg" type="image/x-icon">
+    <link rel="stylesheet" href="whackMole.css">
+</head>
+<body>
+  <h1>Your second challenge is <span style="color: #4f1189;">Whack-a-MAN!</span> You have 30s to hit at least 30 men, have fun <3</h1>
+  <div class="score-board">
+    <div class="text">Score: <span id="score">0</span></div>
+    <div class="text">Time Left: <span id="time">30</span>s</div>
+  </div>
+  <main>
+    <div class="game-grid">
+      <div class="hole" id="hole1"></div>
+      <div class="hole" id="hole2"></div>
+      <div class="hole" id="hole3"></div>
+      <div class="hole" id="hole4"></div>
+      <div class="hole" id="hole5"></div>
+      <div class="hole" id="hole6"></div>
+    </div>
+    <button class="btn" onclick="startGame()" style="margin-top: 30px;">Start Game</button>
+  </main>
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <h2>YAY HIT THOSE MEN WAAAAA!</h2>
+      <p>You did great! <b>(fuck men)</b></p>
+      <p>Now you can play again or get your reward and go to the next challenge!</p>
+      <button id="restartBtn" class="btn">Restart</button>
+      <button class="btn" onclick="copyText()">Second Gift</button>
+    </div>
+</div>
+</body>
+<script src="whackMole.js"></script>
+</html>
