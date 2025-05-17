@@ -14,7 +14,7 @@ function nextMessage(){
     mainMessage.innerHTML = messages[msgId];
 }
 function previousMessage(){
-    extPageBtn.style.display = 'none';
+    nextPageBtn.style.display = 'none';
     if(msgId - 1 < 0){
         msgId = 0;
     }else{
